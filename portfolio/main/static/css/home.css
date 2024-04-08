@@ -1,0 +1,61 @@
+/* Filters section */
+.filters {
+  margin-bottom: 20px;
+}
+
+#name-search {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tag:hover {
+  background-color: #0056b3;
+}
+
+/* Projects list */
+.projects-list {
+  margin-top: 20px;
+}
+
+.project {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+  margin-top: 0;
+}
+
+.project p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tags-list {
+    flex-direction: column;
+  }
+}

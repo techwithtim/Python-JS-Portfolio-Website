@@ -1,0 +1,98 @@
+/* Project Card */
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 1200px; /* Adjust based on your preference */
+  margin: auto;
+  padding: 20px;
+}
+
+.project-info {
+  flex: 1;
+  padding-right: 20px; /* Adds some space between the text and the carousel */
+}
+
+/* Adjustments to previous styles for consistency */
+h1,
+p {
+  margin-bottom: 20px;
+}
+
+/* Carousel */
+.carousel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Added to position controls */
+  max-width: 50%; /* Adjust the width of the carousel relative to the card */
+  margin-left: 20px; /* Optional: Adds some space between the info and carousel */
+}
+
+.carousel-images {
+  display: flex;
+  flex: 1; /* Allows the carousel to fill the space */
+  overflow: hidden;
+  position: relative; /* Ensure the images container doesn't overlap controls */
+}
+
+/* Carousel Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  z-index: 10; /* Ensure controls are above the images */
+}
+
+.carousel-control.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px; /* Adjusted for consistency */
+}
+
+.carousel-control.next {
+  right: 0;
+  border-radius: 0 3px 3px 0; /* Adjusted for consistency */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-info,
+  .carousel {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .carousel {
+    order: -1; /* Puts the carousel above the info on small screens */
+    margin-left: 0; /* Resets the margin for smaller screens */
+  }
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  background-color: black; /* Fill the background with black */
+  width: 100%; /* Full width of the carousel */
+  height: 400px; /* Fixed height, adjust as needed */
+}
+
+.carousel-item img {
+  max-height: 100%; /* Limit the image height to fit within the container */
+  max-width: 100%; /* Limit the image width to fit within the container */
+  object-fit: contain; /* Maintain aspect ratio and fit the image within the bounds */
+}

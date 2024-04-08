@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio - Home{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extrahead %}
+    {% endblock extrahead %}
+</head>
+<body>
+    <header>
+        <ul class="nav-menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    {% block extra_js %}
+    {% endblock extra_js %}
+</body>
+</html>
